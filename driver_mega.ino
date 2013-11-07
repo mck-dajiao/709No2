@@ -1,9 +1,9 @@
-#include <DStepper.h>
+#include <Stepper.h>
 
 const int stepPer = 200;
 
-DStepper stepper1(stepPer, 4, 5, 6, 7);
-DStepper stepper2(stepPer, 8, 9, 10, 11);
+Stepper stepper1(stepPer, 4, 5, 6, 7);
+Stepper stepper2(stepPer, 8, 9, 10, 11);
 
 int begin;
 char ins[2];
