@@ -20,13 +20,13 @@ Stepper stepper2(stepPer, 8, 9, 10, 11);
 
 void goAhead(){
   
-	digitalWrite(led, HIGH);
+	writeDigital(led, HIGH);
 	for(i = 1; i<4; i++){
     	stepper1.step(4);
 		stepper2.step(4);
 	}
 	// Serial.println("Go Ahead");
-	digitalWrite(led, LOW);
+	WriteDigital(led, LOW);
 }
 
 void goBack(){
@@ -57,7 +57,7 @@ void stepControl(){
 
 	while(inst != '@'){
 
-		inst = Serial1.readBytes(&inst, 1);
+		inst = Serial.readBytes(&inst, 1);
 	
 		switch(inst){
 			// go ahead 
@@ -89,7 +89,7 @@ void test(){
 	Serial.println("test mode");
 	while(step != '$'){
 
-		Serial1.readBytes(&step, 1);
+		Serial.readBytes(&step, 1);
 
 		switch(step){
 			case '1':	
