@@ -6,7 +6,7 @@ ser.write("testing")
 
 try:
 	while 1:
-	response = ser.readline()
-	print response
+		response = ser.readline()
+		print response
 except KeyboardInterrupt:
 	ser.close()
